@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "RtlGsCFQ6/8=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jose\\Desktop\\ReactWebApi\\ReactWebApi.Server\\ReactWebApi.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "C:\\Users\\Jose\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}

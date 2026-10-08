@@ -1,0 +1,33 @@
+import "../Styles/Nav.css"
+import QuisqueyaIcon from "../assets/LogoQuisqueyaConnectIcon.png"
+
+const Nav = () => {
+    return(
+        <>
+            <div className="container">
+                <div className="logoIcon">
+                    <img src={QuisqueyaIcon} alt="" />
+                </div>
+                <nav className="nav">
+                    <div className="content">
+                        <div className="form-group">
+                            <ul className="list">
+                                <li className="list-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li className="list-item">
+                                    <a href="#">Quieres le contactemos? </a>
+                                </li>
+                                <li className="list-item">
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </>
+    );
+}
+
+export default Nav;
