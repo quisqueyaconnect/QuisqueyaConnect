@@ -1,10 +1,9 @@
 import "../Styles/Nav.css"
-import QuisqueyaIcon from "../assets/LogoQuisqueyaConnectIcon.png"
 
 const Nav = () => {
     return(
         <>
-            <div className="container">
+            {/* <div className="container">
                 <div className="logoIcon">
                     <img src={QuisqueyaIcon} alt="" />
                 </div>
@@ -25,7 +24,7 @@ const Nav = () => {
                         </div>
                     </div>
                 </nav>
-            </div>
+            </div> */}
         </>
     );
 }
