@@ -3,9 +3,9 @@ import "../Styles/Nav.css"
 const Nav = () => {
     return(
         <>
-            {/* <div className="container">
+            <div className="container">
                 <div className="logoIcon">
-                    <img src={QuisqueyaIcon} alt="" />
+                    <img src="../public/imageLogo.png" alt="" />
                 </div>
                 <nav className="nav">
                     <div className="content">
@@ -24,7 +24,7 @@ const Nav = () => {
                         </div>
                     </div>
                 </nav>
-            </div> */}
+            </div>
         </>
     );
 }

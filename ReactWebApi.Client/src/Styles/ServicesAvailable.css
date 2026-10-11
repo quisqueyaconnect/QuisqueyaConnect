@@ -183,3 +183,109 @@
         0 12px 35px rgba(0, 100, 180, 0.30),
         inset 0 1px 1px rgba(255, 255, 255, 0.4);
 }
+
+/* Contenedor de los servicios */
+.service-available {
+    padding: 15px;
+}
+
+/* Separación entre tarjetas */
+.service-list {
+    margin-bottom: 20px;
+}
+
+/* Fondo oscuro detrás del panel */
+.service-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Ventana emergente lateral derecha */
+.service-popup {
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: 0;
+    width: 600px;
+    max-width: 90%;
+    height: 100vh;
+    padding: 70px 30px 30px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    animation: slideInRight 0.35s ease forwards;
+}
+
+/* Botón para cerrar */
+.close-popup {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(135, 206, 235, 0.25);
+    color: #173b57;
+    font-size: 30px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.close-popup:hover {
+    background: rgba(135, 206, 235, 0.6);
+    transform: rotate(90deg);
+}
+
+/* Título del panel */
+.service-popup h2 {
+    color: #173b57;
+    margin-bottom: 20px;
+}
+
+/* Descripción del servicio */
+.service-popup p {
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* Animación de entrada desde la derecha */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Animación de aparición del fondo */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 576px) {
+    .service-popup {
+        width: 100%;
+        max-width: 100%;
+    }
+}

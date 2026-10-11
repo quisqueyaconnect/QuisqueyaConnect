@@ -37,21 +37,21 @@ body::before {
     background-size:
         1000px,
         400px, 340px, 340px,
-        400px, 340px, 340px,
+        350px, 340px, 340px,
         280px, 280px, 280px, 280px;
 
     background-position:
         center center,
-        left 0% center,
-        left 10% top 15%,
-        left 10% bottom 15%,
-        right 0% center,
-        right 10% top 15%,
-        right 10% bottom 15%,
-        left 33% top 2%,
-        right 33% top 2%,
-        left 33% bottom 2%,
-        right 33% bottom 2%;
+        left -9% center,
+        left 17% top 10%,
+        left 18% bottom 16%,
+        right 10% top 35%,
+        right -10% top 5%,
+        right 9% bottom 15%,
+        left 3% top -13%,
+        right 50% top 2%,
+        left -5% bottom 2%,
+        right 40% bottom 2%;
 
     background-repeat: no-repeat;
 
