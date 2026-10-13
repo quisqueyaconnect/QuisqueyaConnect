@@ -1,0 +1,287 @@
+
+/* =========================================
+   QUISQUEYA CONNECT
+   MISION, VISION Y VALORES
+   ========================================= */
+
+/* SECCION PRINCIPAL */
+
+.mvv-section {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 85px 6%;
+    background: transparent;
+    color: #263746;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ENCABEZADO */
+
+.mvv-section .mvv-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.mvv-section .mvv-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #1685bd;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.mvv-section .mvv-heading h2 {
+    margin: 0 0 16px;
+    color: #16466b;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.mvv-section .mvv-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #536b7e;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* CONTENEDOR DE TARJETAS */
+
+.mvv-section .mvv-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* TARJETAS CRISTALINAS */
+
+.mvv-section .mvv-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 32px 27px 35px;
+    overflow: hidden;
+
+    background: rgba(231, 247, 255, 0.42);
+    border: 1px solid rgba(80, 174, 225, 0.38);
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 35px rgba(36, 123, 174, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* BRILLO DECORATIVO */
+
+.mvv-section .mvv-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #69c7f3,
+        #c0efff,
+        transparent
+    );
+
+    opacity: 0.9;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+@media (hover: hover) {
+    .mvv-section .mvv-card:hover {
+        transform: translateY(-7px);
+        border-color: rgba(28, 151, 211, 0.7);
+
+        box-shadow:
+            0 18px 40px rgba(36, 123, 174, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    }
+}
+
+/* ICONOS */
+
+.mvv-section .mvv-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 62px;
+    height: 62px;
+    margin-bottom: 24px;
+
+    color: #168cc5;
+    background: rgba(190, 233, 255, 0.45);
+    border: 1px solid rgba(77, 174, 224, 0.35);
+    border-radius: 18px;
+
+    box-shadow: inset 0 1px 5px rgba(255, 255, 255, 0.75);
+}
+
+.mvv-section .mvv-icon svg {
+    display: block;
+    width: 31px;
+    height: 31px;
+}
+
+/* TITULOS */
+
+.mvv-section .mvv-card h3 {
+    margin: 0 0 17px;
+    color: #16466b;
+    font-size: 21px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+/* DESCRIPCIONES */
+
+.mvv-section .mvv-card p {
+    margin: 0;
+    color: #435d70;
+    font-size: 15px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+/* LISTA DE VALORES */
+
+.mvv-section .mvv-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mvv-section .mvv-card li {
+    position: relative;
+    padding-left: 21px;
+
+    color: #435d70;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.mvv-section .mvv-card li::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #29a7df;
+    box-shadow: 0 0 8px rgba(41, 167, 223, 0.35);
+}
+
+/* LINEA DECORATIVA INFERIOR */
+
+.mvv-section .mvv-card-line {
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin-top: auto;
+    padding-top: 0;
+    border-radius: 5px;
+    background: linear-gradient(90deg, #168cc5, #9de3ff);
+    opacity: 0.8;
+}
+
+/* ESPACIO PARA LA LINEA EN TARJETAS */
+
+.mvv-section .mvv-card p + .mvv-card-line,
+.mvv-section .mvv-card ul + .mvv-card-line {
+    margin-top: 28px;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+    .mvv-section {
+        padding: 70px 5%;
+    }
+
+    .mvv-section .mvv-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .mvv-section .mvv-card:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* MOVILES */
+
+@media (max-width: 600px) {
+    .mvv-section {
+        padding: 55px 20px;
+    }
+
+    .mvv-section .mvv-heading {
+        margin-bottom: 32px;
+    }
+
+    .mvv-section .mvv-heading p {
+        font-size: 14px;
+    }
+
+    .mvv-section .mvv-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .mvv-section .mvv-card:last-child {
+        grid-column: auto;
+    }
+
+    .mvv-section .mvv-card {
+        padding: 27px 23px 30px;
+        border-radius: 19px;
+    }
+
+    .mvv-section .mvv-card h3 {
+        font-size: 20px;
+    }
+}
+
+/* RESPETA LA PREFERENCIA DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    .mvv-section .mvv-card {
+        transition: none;
+    }
+}
