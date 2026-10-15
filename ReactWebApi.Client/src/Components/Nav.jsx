@@ -5,7 +5,10 @@ const Nav = () => {
         <>
             <div className="container">
                 <div className="logoIcon">
-                    <img src="../public/imageLogo.png" alt="" />
+                    <a href="">
+                        <img src="../public/imageLogo.png" alt="" />
+                    </a>
+                    
                 </div>
                 <nav className="nav">
                     <div className="content">
@@ -15,7 +18,7 @@ const Nav = () => {
                                     <a href="#">Home</a>
                                 </li>
                                 <li className="list-item">
-                                    <a href="#">Quieres le contactemos? </a>
+                                    <a href="https://www.google.com/">Quieres le contactemos? </a>
                                 </li>
                                 <li className="list-item">
                                     <a href="#">Contact</a>

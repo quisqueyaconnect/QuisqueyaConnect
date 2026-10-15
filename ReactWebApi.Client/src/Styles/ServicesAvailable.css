@@ -1,266 +1,450 @@
+
+/* =========================================
+   QUISQUEYA CONNECT
+   SERVICIOS DISPONIBLES
+   PALETA AZUL CRISTALINO
+   ========================================= */
+
+/* SECCIÓN PRINCIPAL */
+
 .service-available {
     width: 90%;
     max-width: 1300px;
-    margin: 50px auto 50px;
-    padding: 30px;
+    margin: 50px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/* TÍTULO PRINCIPAL */
 
 .service-available h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 32px;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0 2px 10px rgba(0, 80, 150, 0.4);
+    font-weight: 800;
+
+    /* COLOR DE LA FUENTE */
+    color: #16466b;
+
+    text-shadow: 0 2px 10px rgba(0, 80, 150, 0.15);
 }
 
-/* Contenedor de cada tarjeta */
+/* CONTENEDOR DE CADA TARJETA */
 .service-list {
     display: inline-block;
     vertical-align: top;
     width: 31%;
-    margin: 0 1%;
+    margin: 0 1% 20px;
+    box-sizing: border-box;
 }
 
-/* Tarjeta */
+/* CONTENEDOR DE LOS SERVICIOS */
+.service-available {
+    width: 90%;
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 15px;
+    box-sizing: border-box;
+
+    /* CENTRAR LAS TARJETAS */
+    text-align: center;
+}
+
+/* TARJETA CRISTALINA */
+
 .service-list .card {
     min-height: 260px;
     overflow: hidden;
     border-radius: 20px;
 
-    background: rgba(255, 255, 255, 0.18);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(231, 247, 255, 0.42);
+    border: 1px solid rgba(80, 174, 225, 0.38);
 
     box-shadow:
-        0 8px 32px rgba(0, 70, 120, 0.25),
-        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+        0 10px 35px rgba(36, 123, 174, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    transition: all 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
 }
 
-/* Efecto al pasar el mouse */
-.service-list .card:hover {
-    transform: translateY(-10px);
-    box-shadow:
-        0 15px 40px rgba(0, 100, 180, 0.35),
-        inset 0 1px 1px rgba(255, 255, 255, 0.5);
+/* EFECTO AL PASAR EL CURSOR */
 
-    background: rgba(255, 255, 255, 0.25);
+@media (hover: hover) {
+    .service-list .card:hover {
+        transform: translateY(-7px);
+
+        border-color: rgba(28, 151, 211, 0.7);
+
+        box-shadow:
+            0 18px 40px rgba(36, 123, 174, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+        background: rgba(231, 247, 255, 0.58);
+    }
 }
 
-/* Encabezado */
+/* ENCABEZADO DE LA TARJETA */
+
 .service-list .card-header {
     padding: 20px;
     text-align: center;
 
-    background: rgba(0, 150, 255, 0.20);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(105, 199, 243, 0.20);
+    border-bottom: 1px solid rgba(80, 174, 225, 0.30);
 }
+
+/* COLOR DE LA FUENTE DEL TÍTULO DE CADA TARJETA */
 
 .service-list .card-header h3 {
     margin: 0;
-    color: #ffffff;
+
+    color: #16466b;
+
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 750;
+    line-height: 1.4;
 }
 
-/* Contenido */
+/* CONTENIDO DE LA TARJETA */
+
 .service-list .card-body {
     padding: 25px;
     text-align: center;
 }
 
+/* COLOR DE LA FUENTE DE LAS DESCRIPCIONES */
+
 .service-list .card-body p {
-    color: #47aff5;
-    font-size: 16px;
-    line-height: 1.6;
+    color: #435d70;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.9;
+
     margin-bottom: 25px;
+    overflow-wrap: anywhere;
 }
 
-/* Botón */
+/* BOTÓN */
+
 .service-list .card-body .btn {
     padding: 10px 22px;
-    border: 1px solid rgba(255, 255, 255, 0.45);
+
+    border: 1px solid rgba(80, 174, 225, 0.45);
     border-radius: 10px;
 
+    /* COLOR DE LA FUENTE DEL BOTÓN */
     color: #ffffff;
-    background: rgba(0, 130, 220, 0.65);
 
+    background: rgba(22, 140, 197, 0.82);
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     font-weight: 600;
+
     cursor: pointer;
 
-    box-shadow: 0 4px 15px rgba(0, 90, 160, 0.25);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 90, 160, 0.18);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
+/* EFECTO DEL BOTÓN */
 
 .service-list .card-body .btn:hover {
-    background: rgba(0, 170, 255, 0.85);
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0, 120, 220, 0.4);
+    background: #1685bd;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 20px rgba(0, 120, 220, 0.30);
 }
 
-/* Tablets */
-@media (max-width: 900px) {
-    .service-list {
-        width: 47%;
-        margin: 1%;
-    }
-}
+/* DESCRIPCIÓN PRINCIPAL DEL SERVICIO */
 
-/* Celulares */
-@media (max-width: 600px) {
-    .description {
-        width: 90%;
-        padding: 20px;
-        margin: 35px auto;
-    }
-
-    .description p {
-        font-size: 15px;
-        line-height: 1.7;
-        text-align: left;
-    }
-    .service-available {
-        width: 95%;
-        margin-top: 100px;
-        padding: 15px;
-    }
-
-    .service-list {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .service-available h2 {
-        font-size: 27px;
-    }
-}
-
-/* Descripción principal del servicio */
 .description {
     width: 85%;
     max-width: 1000px;
+
     margin: 200px auto 100px;
     padding: 15px 35px;
 
-    /* Efecto cristalino */
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+
+    /* EFECTO CRISTALINO AZUL */
+
+    background: rgba(231, 247, 255, 0.30);
+
+    border: 1px solid rgba(80, 174, 225, 0.35);
     border-radius: 20px;
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
     box-shadow:
-        0 8px 32px rgba(0, 70, 120, 0.20),
-        inset 0 1px 1px rgba(255, 255, 255, 0.3);
+        0 10px 35px rgba(36, 123, 174, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.75);
 
-    transition: all 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/* Formato del texto */
+/* COLOR DE LA FUENTE DE LA DESCRIPCIÓN PRINCIPAL */
+
 .description p {
     margin: 0;
-    color: #ffffff;
+
+    color: #435d70;
+
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.8;
-    letter-spacing: 0.4px;
+
+    line-height: 1.9;
+    letter-spacing: 0.3px;
+
     text-align: justify;
+    overflow-wrap: anywhere;
 }
 
-/* Efecto al pasar el mouse */
-.description:hover {
-    transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.22);
+/* EFECTO AL PASAR EL CURSOR */
 
-    box-shadow:
-        0 12px 35px rgba(0, 100, 180, 0.30),
-        inset 0 1px 1px rgba(255, 255, 255, 0.4);
+@media (hover: hover) {
+    .description:hover {
+        transform: translateY(-4px);
+
+        background: rgba(231, 247, 255, 0.45);
+
+        box-shadow:
+            0 12px 35px rgba(36, 123, 174, 0.15),
+            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    }
 }
 
-/* Contenedor de los servicios */
-.service-available {
-    padding: 15px;
-}
+/* =========================================
+   VENTANA EMERGENTE LATERAL
+   ========================================= */
 
-/* Separación entre tarjetas */
-.service-list {
-    margin-bottom: 20px;
-}
+/* FONDO OSCURO DETRÁS DEL PANEL */
 
-/* Fondo oscuro detrás del panel */
 .service-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(3px);
+
+    background: rgba(10, 35, 55, 0.35);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
     z-index: 999;
+
     animation: fadeIn 0.3s ease;
 }
 
-/* Ventana emergente lateral derecha */
+/* VENTANA EMERGENTE CRISTALINA */
+
 .service-popup {
     position: fixed;
+
     top: 0;
     left: auto;
     right: 0;
+
     width: 600px;
     max-width: 90%;
     height: 100vh;
+
     padding: 70px 30px 30px;
     box-sizing: border-box;
+
     overflow-y: auto;
-    background: rgba(255, 255, 255, 0.85);
+
+    /* FONDO AZUL CRISTALINO */
+
+    background: rgba(231, 247, 255, 0.92);
+
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
-    border-right: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15);
+
+    border-left: 1px solid rgba(80, 174, 225, 0.40);
+
+    box-shadow: -10px 0 35px rgba(36, 123, 174, 0.15);
+
     z-index: 1000;
+
     animation: slideInRight 0.35s ease forwards;
 }
 
-/* Botón para cerrar */
+/* BOTÓN PARA CERRAR */
+
 .close-popup {
     position: absolute;
+
     top: 15px;
     right: 20px;
+
     width: 40px;
     height: 40px;
-    border: none;
+
+    border: 1px solid rgba(80, 174, 225, 0.30);
     border-radius: 50%;
+
     background: rgba(135, 206, 235, 0.25);
-    color: #173b57;
+
+    /* COLOR DE LA FUENTE DEL BOTÓN CERRAR */
+    color: #16466b;
+
     font-size: 30px;
+    line-height: 1;
+
     cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
+/* EFECTO DEL BOTÓN CERRAR */
+
 .close-popup:hover {
-    background: rgba(135, 206, 235, 0.6);
+    background: rgba(105, 199, 243, 0.55);
+
     transform: rotate(90deg);
 }
 
-/* Título del panel */
+/* COLOR DE LA FUENTE DEL TÍTULO DEL PANEL */
+
 .service-popup h2 {
-    color: #173b57;
-    margin-bottom: 20px;
+    color: #16466b;
+
+    margin: 0 0 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+
+    line-height: 1.4;
 }
 
-/* Descripción del servicio */
+/* COLOR DE LA FUENTE DE LOS PÁRRAFOS DEL PANEL */
+
 .service-popup p {
-    color: #334155;
+    color: #435d70;
+
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 1.7;
+    font-weight: 400;
+
+    line-height: 1.9;
+
     margin-bottom: 25px;
+    overflow-wrap: anywhere;
 }
 
-/* Animación de entrada desde la derecha */
+/* TÍTULOS SECUNDARIOS DEL PANEL */
+
+.service-popup h3 {
+    color: #16466b;
+
+    font-size: 21px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+/* ETIQUETAS DE LOS FORMULARIOS DEL PANEL */
+
+.service-popup label {
+    color: #16466b;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* CAMPOS DE TEXTO DEL PANEL */
+
+.service-popup input,
+.service-popup textarea,
+.service-popup select {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 14px;
+
+    color: #263746;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(80, 174, 225, 0.40);
+    border-radius: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* COLOR DEL BORDE AL SELECCIONAR UN CAMPO */
+
+.service-popup input:focus,
+.service-popup textarea:focus,
+.service-popup select:focus {
+    border-color: #1685bd;
+
+    box-shadow: 0 0 0 3px rgba(22, 133, 189, 0.12);
+}
+
+/* BOTONES DENTRO DEL PANEL */
+
+.service-popup button:not(.close-popup) {
+    color: #ffffff;
+
+    background: #168cc5;
+
+    border: 1px solid rgba(80, 174, 225, 0.45);
+    border-radius: 10px;
+
+    padding: 11px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.service-popup button:not(.close-popup):hover {
+    background: #16466b;
+
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   ANIMACIONES
+   ========================================= */
+
+/* ENTRADA DEL PANEL DESDE LA DERECHA */
+
 @keyframes slideInRight {
     from {
         transform: translateX(100%);
@@ -271,7 +455,8 @@
     }
 }
 
-/* Animación de aparición del fondo */
+/* APARICIÓN DEL FONDO */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -282,10 +467,108 @@
     }
 }
 
-/* Adaptación para dispositivos móviles */
-@media (max-width: 576px) {
+/* =========================================
+   TABLETS
+   ========================================= */
+
+@media (max-width: 900px) {
+    .service-available {
+        width: 95%;
+    }
+
+    .service-list {
+        width: 47%;
+        margin: 1% 1% 20px;
+    }
+
+    .description {
+        width: 90%;
+        margin: 100px auto 60px;
+    }
+}
+
+/* =========================================
+   CELULARES
+   ========================================= */
+
+@media (max-width: 600px) {
+    .service-available {
+        width: 95%;
+        margin-top: 60px;
+        padding: 10px;
+    }
+
+    .service-available h2 {
+        font-size: 27px;
+    }
+
+    .service-list {
+        display: block;
+        width: 100%;
+        margin: 10px 0 20px;
+    }
+
+    .service-list .card {
+        min-height: 230px;
+    }
+
+    .service-list .card-header h3 {
+        font-size: 20px;
+    }
+
+    .service-list .card-body {
+        padding: 22px;
+    }
+
+    .service-list .card-body p {
+        font-size: 14px;
+    }
+
+    .description {
+        width: 95%;
+        margin: 60px auto 40px;
+        padding: 20px;
+    }
+
+    .description p {
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
     .service-popup {
         width: 100%;
         max-width: 100%;
+
+        padding: 65px 22px 25px;
+    }
+
+    .service-popup h2 {
+        font-size: 24px;
+    }
+
+    .service-popup p {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   ACCESIBILIDAD
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .service-list .card,
+    .service-list .card-body .btn,
+    .description,
+    .close-popup,
+    .service-popup,
+    .service-overlay {
+        animation: none;
+        transition: none;
+    }
+
+    .service-list .card:hover,
+    .description:hover {
+        transform: none;
     }
 }

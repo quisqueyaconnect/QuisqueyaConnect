@@ -13,20 +13,26 @@ function ServiceAvailable() {
         },
         {
             id: 2,
-            title: "Gestión de citas y asistencia comercial",
+            title: "Gestión de Citas y Asistencia Comercial",
             description: "Optimizamos la gestión de citas y oportunidades comerciales para que tu empresa aproveche cada contacto con sus clientes. En Quisqueya Connect nos encargamos de organizar agendas, confirmar y modificar citas, registrar solicitudes y realizar el seguimiento de presupuestos y consultas comerciales."
-        },
-        {
-            id: 3,
-            title: "soporte administrativo y atención multicanal",
-            description: "Ofrecemos soporte administrativo y atención multicanal para facilitar las operaciones diarias de tu empresa. En Quisqueya Connect trabajamos para que tu empresa mantenga una comunicación organizada, una atención consistente y una gestión más eficiente, adaptándonos a sus necesidades y al volumen de trabajo."
         }
     ];
+
+        // CAMBIO 1: Función para resaltar Quisqueya Connect en negrita
+    const highlightBrand = (text) => {
+        return text.split(/(Quisqueya Connect)/g).map((part, index) =>
+            part === "Quisqueya Connect" ? (
+                <strong key={index}>{part}</strong>
+            ) : (
+                part
+            )
+        );
+    };
 
     return (
         <>
             <div className="service-available col-md-2">
-                <h2>Service Available</h2>
+                <h2>Servicios Disponibles</h2>
 
                 {services.map((service) => (
                     <div className="service-list" key={service.id}>
@@ -37,7 +43,8 @@ function ServiceAvailable() {
                             </div>
 
                             <div className="card-body">
-                                <p>{service.description}</p>
+                                                                {/* CAMBIO 2: Usamos la función en la descripción */}
+                                <p>{highlightBrand(service.description)}</p>
 
                                 <button
                                     className="btn btn-primary"

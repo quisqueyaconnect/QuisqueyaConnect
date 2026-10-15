@@ -2,93 +2,357 @@
 .popup-overlay {
     position: fixed;
     inset: 0;
+
     background: rgba(10, 35, 55, 0.35);
+
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+
     z-index: 999;
 }
 
-/* Ventana emergente derecha */
+
+/* =========================================
+   VENTANA EMERGENTE DERECHA
+   ========================================= */
+
 .contact-popup {
     position: fixed;
     top: 0;
     right: 0;
+
     width: 450px;
     max-width: 100%;
+
     height: 100vh;
+    height: 100dvh;
+
     overflow-y: auto;
+    overscroll-behavior: contain;
+
     box-sizing: border-box;
     padding: 70px 30px 30px;
 
-    /* Fondo cristalino similar al Nav */
-    background: rgba(254, 250, 238, 0.92);
+    /* Azul cristalino de Quisqueya Connect */
+    background: linear-gradient(
+        135deg,
+        rgba(135, 206, 235, 0.92),
+        rgba(234, 246, 255, 0.96),
+        rgba(173, 216, 230, 0.92)
+    );
+
+    /* Efecto de vidrio */
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 
-    border-left: 1px solid rgba(255, 255, 255, 0.7);
-    box-shadow: -10px 0 35px rgba(0, 70, 120, 0.2);
+    /* Bordes cristalinos */
+    border-left: 1px solid rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        -10px 0 35px rgba(0, 70, 120, 0.20),
+        inset 1px 0 0 rgba(255, 255, 255, 0.35);
 
     z-index: 1000;
+
     animation: popupFromRight 0.35s ease;
 }
 
+
+/* =========================================
+   TÍTULO
+   ========================================= */
+
 .contact-popup h2 {
-    color: #173b57;
+    color: #0B2F4F;
+
+    margin-top: 0;
     margin-bottom: 20px;
+
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
 
+
+/* =========================================
+   PÁRRAFOS
+   ========================================= */
+
 .contact-popup p {
-    color: #334155;
+    color: #263746;
+
     line-height: 1.7;
     margin-bottom: 18px;
+
+    font-size: 1rem;
 }
+
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
 
 .contact-popup form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+
+    width: 100%;
 }
 
+
+/* Etiquetas */
+.contact-popup label {
+    color: #0B2F4F;
+
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+
+/* Campos de texto */
 .contact-popup input,
 .contact-popup textarea {
     width: 100%;
     box-sizing: border-box;
-    padding: 12px;
-    border: 1px solid rgba(23, 59, 87, 0.25);
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.7);
+
+    padding: 13px 14px;
+
+    color: #173b57;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+    border: 1px solid rgba(11, 47, 79, 0.22);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.68);
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
-.contact-popup label {
-    color: #173b57;
-    font-weight: 600;
+
+/* Efecto al seleccionar un campo */
+.contact-popup input:focus,
+.contact-popup textarea:focus {
+    border-color: #168ac0;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    box-shadow: 0 0 0 3px rgba(22, 138, 192, 0.15);
 }
+
+
+/* Área del mensaje */
+.contact-popup textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* Texto de ejemplo */
+.contact-popup input::placeholder,
+.contact-popup textarea::placeholder {
+    color: #71879a;
+}
+
+
+/* =========================================
+   BOTÓN DE ENVIAR
+   ========================================= */
 
 .contact-popup .submit-btn {
     margin-top: 12px;
-    padding: 12px;
-    color: white;
-    background: #167db3;
-    border: none;
-    border-radius: 10px;
+    padding: 14px 18px;
+
+    color: #ffffff;
+
+    /* Azul cristalino */
+    background: linear-gradient(
+        135deg,
+        #168ac0,
+        #086696
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 12px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+
     cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(8, 102, 150, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
 }
 
+
+/* Efecto al pasar el cursor */
 .contact-popup .submit-btn:hover {
-    background: #086696;
+    background: linear-gradient(
+        135deg,
+        #086696,
+        #0B2F4F
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(8, 102, 150, 0.28);
 }
+
+
+/* Efecto al pulsar */
+.contact-popup .submit-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ANIMACIÓN DE ENTRADA
+   ========================================= */
 
 @keyframes popupFromRight {
     from {
         transform: translateX(100%);
+        opacity: 0.7;
     }
+
     to {
         transform: translateX(0);
+        opacity: 1;
     }
 }
 
-@media (max-width: 576px) {
+
+/* =========================================
+   TABLETAS
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+
+    .contact-popup {
+        width: 420px;
+        max-width: 90vw;
+
+        padding: 65px 25px 30px;
+    }
+
+    .contact-popup h2 {
+        font-size: 1.65rem;
+    }
+}
+
+
+/* =========================================
+   TELÉFONOS
+   ========================================= */
+
+@media screen and (max-width: 576px) {
+
+    .popup-overlay {
+        background: rgba(10, 35, 55, 0.40);
+
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+
     .contact-popup {
         width: 100%;
+        max-width: 100%;
+
+        height: 100vh;
+        height: 100dvh;
+
+        padding: 65px 22px 25px;
+
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.75);
+
+        /* El mismo azul cristalino de la página */
+        background: linear-gradient(
+            135deg,
+            rgba(135, 206, 235, 0.92),
+            rgba(234, 246, 255, 0.96),
+            rgba(173, 216, 230, 0.92)
+        );
+
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+
+        box-shadow:
+            0 -8px 30px rgba(0, 70, 120, 0.16),
+            inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    }
+
+    .contact-popup h2 {
+        font-size: 1.5rem;
+        margin-bottom: 16px;
+    }
+
+    .contact-popup p {
+        font-size: 0.95rem;
+        line-height: 1.65;
+    }
+
+    .contact-popup form {
+        gap: 10px;
+    }
+
+    .contact-popup input,
+    .contact-popup textarea {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .contact-popup .submit-btn {
+        width: 100%;
+        padding: 14px;
+    }
+}
+
+
+/* =========================================
+   TELÉFONOS PEQUEÑOS
+   ========================================= */
+
+@media screen and (max-width: 380px) {
+
+    .contact-popup {
+        padding: 60px 16px 22px;
+    }
+
+    .contact-popup h2 {
+        font-size: 1.35rem;
+    }
+
+    .contact-popup p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* =========================================
+   ACCESIBILIDAD
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-popup {
+        animation: none;
+    }
+
+    .contact-popup input,
+    .contact-popup textarea,
+    .contact-popup .submit-btn {
+        transition: none;
     }
 }

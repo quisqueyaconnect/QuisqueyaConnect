@@ -1,14 +1,21 @@
-/* Fondo principal de Quisqueya Connect */
+
+/* =========================================
+   FONDO PRINCIPAL DE QUISQUEYA CONNECT
+   ========================================= */
+
 body {
     margin: 0;
     min-height: 100vh;
     width: 100%;
     position: relative;
-    background-color: #eaf6ff;
+    background: #FFFFFF !important;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Logos distribuidos por todo el fondo */
+/* =========================================
+   LOGOS DISTRIBUIDOS POR TODO EL FONDO
+   ========================================= */
+
 body::before {
     content: "";
     position: fixed;
@@ -16,23 +23,23 @@ body::before {
 
     background-image:
         /* Logo central */
-        url("../public/imageLogo.png"),
+        url("/imageLogo.png"),
 
         /* Tres logos del lado izquierdo */
-        url("../public/imageLogo.png"),
-        url("../public/imageLogo.png"),
-        url("../public/imageLogo.png"),
+        url("/imageLogo.png"),
+        url("/imageLogo.png"),
+        url("/imageLogo.png"),
 
         /* Tres logos del lado derecho */
-        url("../public/imageLogo.png"),
-        url("../public/imageLogo.png"),
-        url("../public/imageLogo.png"),
+        url("/imageLogo.png"),
+        url("/imageLogo.png"),
+        url("/imageLogo.png"),
 
         /* Logos en las esquinas */
-        url("../public/imageLogo.png"),
-        url("../public/imageLogo.png"),
-        url("../public/imageLogo.png"),
-        url("../public/imageLogo.png");
+        url("/imageLogo.png"),
+        url("/imageLogo.png"),
+        url("/imageLogo.png"),
+        url("/imageLogo.png");
 
     background-size:
         1000px,
@@ -60,27 +67,133 @@ body::before {
     pointer-events: none;
 }
 
-/* Efecto cristalino azul cielo */
+/* =========================================
+   ELIMINAR CAPA DE COLOR DEL FONDO
+   ========================================= */
+
 body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-
-    background: linear-gradient(
-        135deg,
-        rgba(135, 206, 250, 0.20),
-        rgba(255, 255, 255, 0.60),
-        rgba(173, 216, 230, 0.25)
-    );
-
-    backdrop-filter: blur(1px);
-    z-index: -1;
-    pointer-events: none;
+    content: none;
 }
 
-/* Contenido por encima del fondo */
+/* =========================================
+   CONTENIDO POR ENCIMA DEL FONDO
+   ========================================= */
+
 #root {
     position: relative;
     min-height: 100vh;
     z-index: 1;
+}
+
+
+/* =========================================
+   RESPONSIVE PARA TABLETAS
+   ========================================= */
+
+@media screen and (max-width: 1024px) {
+
+    body::before {
+        background-size:
+            650px,
+            280px, 240px, 240px,
+            250px, 240px, 240px,
+            180px, 180px, 180px, 180px;
+
+        background-position:
+            center center,
+            left -12% center,
+            left 5% top 12%,
+            left 5% bottom 12%,
+            right 5% top 35%,
+            right -12% top 8%,
+            right 5% bottom 12%,
+            left -4% top -5%,
+            right 35% top 0%,
+            left -8% bottom -3%,
+            right 25% bottom -3%;
+
+        opacity: 0.20;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE PARA TELÉFONOS
+   ========================================= */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        background: #FFFFFF !important;
+    }
+
+    body::before {
+        /* Logos con tamaños menores */
+        background-size:
+            300px,
+            130px, 110px, 110px,
+            120px, 110px, 110px,
+            85px, 85px, 85px, 85px;
+
+        /* Distribución de los logos */
+        background-position:
+            center center,
+            left -35px center,
+            left 5px top 15%,
+            left 5px bottom 15%,
+            right 5px top 38%,
+            right -35px top 12%,
+            right 5px bottom 15%,
+            left -25px top -15px,
+            right 20% top -10px,
+            left -25px bottom -15px,
+            right 15% bottom -15px;
+
+        opacity: 0.14;
+    }
+
+    /* Sin degradado sobre el fondo */
+    body::after {
+        content: none;
+    }
+
+    #root {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: clip;
+    }
+}
+
+
+/* =========================================
+   RESPONSIVE PARA TELÉFONOS PEQUEÑOS
+   ========================================= */
+
+@media screen and (max-width: 380px) {
+
+    body::before {
+        background-size:
+            240px,
+            95px, 85px, 85px,
+            90px, 85px, 85px,
+            65px, 65px, 65px, 65px;
+
+        background-position:
+            center center,
+            left -30px center,
+            left 0 top 18%,
+            left 0 bottom 18%,
+            right 0 top 40%,
+            right -30px top 12%,
+            right 0 bottom 18%,
+            left -20px top -10px,
+            right 15% top -5px,
+            left -20px bottom -10px,
+            right 10% bottom -10px;
+
+        opacity: 0.12;
+    }
 }

@@ -33,7 +33,7 @@ function InformationCard({ onClose }){
                     event.preventDefault();
                     alert('Formulario enviado');
                 }}>
-                    <label htmlFor="nombre">Nombre completo</label>
+                    <label htmlFor="nombre">Nombre Complerto</label>
                     <input
                         id="nombre"
                         name="nombre"
@@ -41,7 +41,15 @@ function InformationCard({ onClose }){
                         required
                     />
 
-                    <label htmlFor="correo">Correo electrónico</label>
+                    <label htmlFor="nombre">Empresa</label>
+                    <input
+                        id="nombre"
+                        name="nombre"
+                        type="text"
+                        required
+                    />
+
+                    <label htmlFor="correo">Correo Electrónico</label>
                     <input
                         id="correo"
                         name="correo"
@@ -49,11 +57,19 @@ function InformationCard({ onClose }){
                         required
                     />
 
-                    <label htmlFor="mensaje">Mensaje</label>
-                    <textarea
-                        id="mensaje"
-                        name="mensaje"
-                        rows="4"
+                    <label htmlFor="correo">Telefono De Contacto</label>
+                    <input
+                        id="telefono"
+                        name="telefono"
+                        type="text"
+                        required
+                    />
+
+                    <label htmlFor="fechaDia">¿Cuando Desea Ser Contactado?</label>
+                    <input
+                        id="fechaDia"
+                        name="fechaDia"
+                        type="datetime-local"
                         required
                     />
 
