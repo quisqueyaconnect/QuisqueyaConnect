@@ -8,18 +8,18 @@ function ServiceAvailable() {
     const services = [
         {
             id: 1,
-            title: "Service 1",
-            description: "Description of Service 1"
+            title: "Atención al Cliente",
+            description: "En Quisqueya Connect ofrecemos soluciones profesionales de atención al cliente para ayudar a las empresas a gestionar sus llamadas entrantes de forma eficiente, cercana y profesional. Nuestro equipo se encarga de atender consultas, resolver dudas, gestionar solicitudes y transmitir mensajes, garantizando una experiencia positiva para cada cliente."
         },
         {
             id: 2,
-            title: "Service 2",
-            description: "Description of Service 2"
+            title: "Gestión de citas y asistencia comercial",
+            description: "Optimizamos la gestión de citas y oportunidades comerciales para que tu empresa aproveche cada contacto con sus clientes. En Quisqueya Connect nos encargamos de organizar agendas, confirmar y modificar citas, registrar solicitudes y realizar el seguimiento de presupuestos y consultas comerciales."
         },
         {
             id: 3,
-            title: "Service 3",
-            description: "Description of Service 3"
+            title: "soporte administrativo y atención multicanal",
+            description: "Ofrecemos soporte administrativo y atención multicanal para facilitar las operaciones diarias de tu empresa. En Quisqueya Connect trabajamos para que tu empresa mantenga una comunicación organizada, una atención consistente y una gestión más eficiente, adaptándonos a sus necesidades y al volumen de trabajo."
         }
     ];
 

@@ -37,10 +37,8 @@ function MissionVisionValues() {
                     <h3>Nuestra Misión</h3>
 
                     <p>
-                        Ofrecer soluciones y servicios de calidad,
-                        brindando una atención cercana, eficiente
-                        y comprometida con las necesidades de
-                        nuestros clientes.
+                        MISION Ofrecer soluciones profesionales de atención al cliente y gestión de llamadas que ayuden a las empresas a mejorar la experiencia de sus clientes, optimizar sus procesos de comunicación y fortalecer sus relaciones comerciales.
+Nos comprometemos a brindar un servicio cercano, eficiente y de calidad, adaptándonos a las necesidades de cada empresa para convertir cada interacción en una oportunidad de generar confianza y satisfacción.
                     </p>
 
                     <span className="mvv-card-line"></span>
@@ -68,10 +66,8 @@ function MissionVisionValues() {
                     <h3>Nuestra Visión</h3>
 
                     <p>
-                        Ser una empresa reconocida por la innovación,
-                        la excelencia en el servicio y la creación
-                        de experiencias que generen confianza
-                        y relaciones duraderas.
+                        Convertirnos en una empresa de referencia en el sector de los contact centers, reconocida por la calidad de nuestro servicio, la confianza de nuestros clientes y nuestra capacidad para aportar soluciones eficaces a empresas de diferentes sectores.
+Aspiramos a crecer de forma sostenible, incorporando tecnología, desarrollando el talento de nuestro equipo y construyendo relaciones comerciales duraderas basadas en la excelencia y los resultados.
                     </p>
 
                     <span className="mvv-card-line"></span>
@@ -97,10 +93,14 @@ function MissionVisionValues() {
                     <h3>Nuestros Valores</h3>
 
                     <ul>
-                        <li>Compromiso con cada cliente.</li>
-                        <li>Respeto y comunicación efectiva.</li>
-                        <li>Responsabilidad y transparencia.</li>
+                        <li>Compromiso .</li>
+                         Nos implicamos en los objetivos de cada empresa y trabajamos para ofrecer un servicio fiable y constante
+                        <li>Confianza.</li>
+                        Actuamos con transparencia, responsabilidad y respeto por la información de nuestros clientes
+                        <li>Calidad.</li>
+                        Buscamos que cada llamada sea atendida con profesionalidad, amabilidad y eficacia.
                         <li>Innovación y mejora continua.</li>
+                        Aprovechamos la tecnología y la mejora continua para ofrecer soluciones más eficientes.
                     </ul>
 
                     <span className="mvv-card-line"></span>
