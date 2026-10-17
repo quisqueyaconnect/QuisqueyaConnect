@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReactWebApi.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6cc4b4fa1f7a582716745a94bcacafe20131c6db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae39be173563916d86b9a1de7f70ed48871902eb")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReactWebApi.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReactWebApi.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
