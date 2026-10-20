@@ -1,72 +1,98 @@
-
 /* =========================================
    QUISQUEYA CONNECT
    SERVICIOS DISPONIBLES
-   PALETA AZUL CRISTALINO
+   DISEÑO AZUL CRISTALINO
    ========================================= */
 
-/* SECCIÓN PRINCIPAL */
 
-.service-available {
-    width: 90%;
-    max-width: 1300px;
-    margin: 50px auto;
-    padding: 15px;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* =========================================
+   SECCIÓN PRINCIPAL
+   ========================================= */
 
-/* TÍTULO PRINCIPAL */
-
-.service-available h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 32px;
-    font-weight: 800;
-
-    /* COLOR DE LA FUENTE */
-    color: #16466b;
-
-    text-shadow: 0 2px 10px rgba(0, 80, 150, 0.15);
-}
-
-/* CONTENEDOR DE CADA TARJETA */
-.service-list {
-    display: inline-block;
-    vertical-align: top;
-    width: 31%;
-    margin: 10px 2%;
-    box-sizing: border-box;
-}
-
-/* CONTENEDOR DE LOS SERVICIOS */
 .service-available {
     width: 95%;
     max-width: 1400px;
-    margin: 0px auto;
-    padding: 30px;
+    margin: 0 auto;
+    padding: 45px 25px;
     box-sizing: border-box;
-
-    /* CENTRAR LAS TARJETAS */
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     text-align: center;
 }
 
-/* TARJETA CRISTALINA */
+
+/* =========================================
+   TÍTULO PRINCIPAL
+   ========================================= */
+
+.service-available > h2 {
+    margin: 0 0 45px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: clamp(30px, 3vw, 40px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.8px;
+
+    /* DEGRADADO NEGRO AZULADO */
+    background: linear-gradient(
+        120deg,
+        #101d2b 0%,
+        #16466b 48%,
+        #168cc5 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #16466b;
+
+    text-shadow: 0 5px 18px rgba(22, 70, 107, 0.08);
+}
+
+
+/* =========================================
+   CONTENEDOR DE LAS TARJETAS
+   ========================================= */
+
+.service-list {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 1.3% 30px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+/* =========================================
+   TARJETAS CRISTALINAS
+   ========================================= */
 
 .service-list .card {
-    min-height: 260px;
-    overflow: hidden;
-    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 
-    background: rgba(231, 247, 255, 0.42);
-    border: 1px solid rgba(80, 174, 225, 0.38);
+    min-height: 340px;
+    height: 100%;
+    overflow: hidden;
+
+    border: 1px solid rgba(100, 190, 235, 0.42);
+    border-radius: 24px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.78) 0%,
+        rgba(224, 244, 255, 0.58) 48%,
+        rgba(190, 229, 250, 0.38) 100%
+    );
 
     box-shadow:
-        0 10px 35px rgba(36, 123, 174, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        0 12px 30px rgba(36, 123, 174, 0.09),
+        0 3px 8px rgba(22, 70, 107, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     transition:
         transform 0.3s ease,
@@ -75,126 +101,216 @@
         background 0.3s ease;
 }
 
+
+/* DETALLE DECORATIVO SUPERIOR */
+
+.service-list .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #16466b,
+        #168cc5,
+        #91d9ff
+    );
+}
+
+
 /* EFECTO AL PASAR EL CURSOR */
 
 @media (hover: hover) {
     .service-list .card:hover {
-        transform: translateY(-7px);
+        transform: translateY(-9px);
 
-        border-color: rgba(28, 151, 211, 0.7);
+        border-color: rgba(22, 140, 197, 0.65);
+
+        background: linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.92),
+            rgba(221, 243, 255, 0.75),
+            rgba(190, 229, 250, 0.55)
+        );
 
         box-shadow:
-            0 18px 40px rgba(36, 123, 174, 0.15),
-            inset 0 1px 0 rgba(255, 255, 255, 0.95);
-
-        background: rgba(231, 247, 255, 0.58);
+            0 22px 45px rgba(36, 123, 174, 0.16),
+            0 6px 15px rgba(22, 70, 107, 0.06),
+            inset 0 1px 0 rgba(255, 255, 255, 1);
     }
 }
 
-/* ENCABEZADO DE LA TARJETA */
+
+/* =========================================
+   ENCABEZADO DE CADA TARJETA
+   ========================================= */
 
 .service-list .card-header {
-    padding: 20px;
+    position: relative;
+    padding: 26px 22px 22px;
+
     text-align: center;
 
-    background: rgba(105, 199, 243, 0.20);
-    border-bottom: 1px solid rgba(80, 174, 225, 0.30);
+    background: linear-gradient(
+        135deg,
+        rgba(135, 206, 250, 0.28),
+        rgba(190, 230, 255, 0.18)
+    );
+
+    border-bottom: 1px solid rgba(80, 174, 225, 0.28);
 }
 
-/* COLOR DE LA FUENTE DEL TÍTULO DE CADA TARJETA */
+
+/* TÍTULOS DE LAS TARJETAS */
 
 .service-list .card-header h3 {
     margin: 0;
 
-    color: #16466b;
-
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 22px;
-    font-weight: 750;
+    font-weight: 800;
     line-height: 1.4;
+    letter-spacing: -0.3px;
+
+    background: linear-gradient(
+        120deg,
+        #101d2b 0%,
+        #16466b 65%,
+        #1685bd 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #16466b;
 }
 
-/* CONTENIDO DE LA TARJETA */
+
+/* =========================================
+   CONTENIDO DE LAS TARJETAS
+   ========================================= */
 
 .service-list .card-body {
-    padding: 25px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 28px 25px 30px;
     text-align: center;
 }
 
-/* COLOR DE LA FUENTE DE LAS DESCRIPCIONES */
+
+/* DESCRIPCIÓN DEL SERVICIO */
 
 .service-list .card-body p {
+    margin: 0 0 28px;
+
     color: #435d70;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.9;
+    letter-spacing: 0.15px;
 
-    margin-bottom: 25px;
     overflow-wrap: anywhere;
 }
 
-/* BOTÓN */
+
+/* =========================================
+   BOTÓN DE CADA TARJETA
+   ========================================= */
 
 .service-list .card-body .btn {
-    padding: 10px 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-    border: 1px solid rgba(80, 174, 225, 0.45);
-    border-radius: 10px;
+    margin-top: auto;
+    padding: 12px 25px;
 
-    /* COLOR DE LA FUENTE DEL BOTÓN */
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 12px;
+
     color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        #168cc5,
+        #126b9d
+    );
 
-    background: rgba(22, 140, 197, 0.82);
-
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.2px;
 
     cursor: pointer;
 
-    box-shadow: 0 4px 15px rgba(0, 90, 160, 0.18);
+    box-shadow:
+        0 6px 16px rgba(0, 90, 160, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
 
     transition:
         background 0.3s ease,
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
+
 
 /* EFECTO DEL BOTÓN */
 
 .service-list .card-body .btn:hover {
-    background: #1685bd;
+    color: #ffffff;
 
-    transform: translateY(-2px);
+    background: linear-gradient(
+        135deg,
+        #16466b,
+        #1685bd
+    );
 
-    box-shadow: 0 6px 20px rgba(0, 120, 220, 0.30);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 22px rgba(0, 90, 160, 0.28);
 }
 
-/* DESCRIPCIÓN PRINCIPAL DEL SERVICIO */
+
+/* =========================================
+   DESCRIPCIÓN PRINCIPAL DEL SERVICIO
+   ========================================= */
 
 .description {
-    width: 85%;
-    max-width: 1000px;
+    position: relative;
 
-    margin: 200px auto 100px;
-    padding: 15px 35px;
+    width: 85%;
+    max-width: 1050px;
+
+    margin: 90px auto 100px;
+    padding: 32px 40px;
 
     box-sizing: border-box;
 
-    /* EFECTO CRISTALINO AZUL */
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.65),
+        rgba(221, 243, 255, 0.42),
+        rgba(190, 229, 250, 0.30)
+    );
 
-    background: rgba(231, 247, 255, 0.30);
+    border: 1px solid rgba(80, 174, 225, 0.38);
+    border-radius: 24px;
 
-    border: 1px solid rgba(80, 174, 225, 0.35);
-    border-radius: 20px;
-
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 
     box-shadow:
-        0 10px 35px rgba(36, 123, 174, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.75);
+        0 12px 35px rgba(36, 123, 174, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 0.85);
 
     transition:
         transform 0.3s ease,
@@ -202,49 +318,58 @@
         box-shadow 0.3s ease;
 }
 
-/* COLOR DE LA FUENTE DE LA DESCRIPCIÓN PRINCIPAL */
+
+/* TEXTO DE LA DESCRIPCIÓN */
 
 .description p {
     margin: 0;
 
     color: #435d70;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 17px;
     font-weight: 400;
 
-    line-height: 1.9;
-    letter-spacing: 0.3px;
+    line-height: 1.95;
+    letter-spacing: 0.2px;
 
     text-align: justify;
     overflow-wrap: anywhere;
 }
 
-/* EFECTO AL PASAR EL CURSOR */
+
+/* EFECTO DE LA DESCRIPCIÓN */
 
 @media (hover: hover) {
     .description:hover {
-        transform: translateY(-4px);
+        transform: translateY(-5px);
 
-        background: rgba(231, 247, 255, 0.45);
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.82),
+            rgba(221, 243, 255, 0.58),
+            rgba(190, 229, 250, 0.42)
+        );
 
         box-shadow:
-            0 12px 35px rgba(36, 123, 174, 0.15),
-            inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            0 18px 40px rgba(36, 123, 174, 0.14),
+            inset 0 1px 0 rgba(255, 255, 255, 0.95);
     }
 }
+
 
 /* =========================================
    VENTANA EMERGENTE LATERAL
    ========================================= */
 
-/* FONDO OSCURO DETRÁS DEL PANEL */
+
+/* FONDO OSCURO */
 
 .service-overlay {
     position: fixed;
     inset: 0;
 
-    background: rgba(10, 35, 55, 0.35);
+    background: rgba(10, 35, 55, 0.38);
 
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -254,57 +379,66 @@
     animation: fadeIn 0.3s ease;
 }
 
-/* VENTANA EMERGENTE CRISTALINA */
+
+/* PANEL CRISTALINO */
 
 .service-popup {
     position: fixed;
 
     top: 0;
-    left: auto;
     right: 0;
+    left: auto;
 
     width: 600px;
     max-width: 90%;
     height: 100vh;
+    height: 100dvh;
 
-    padding: 70px 30px 30px;
+    padding: 75px 32px 35px;
     box-sizing: border-box;
 
     overflow-y: auto;
 
-    /* FONDO AZUL CRISTALINO */
+    background: linear-gradient(
+        145deg,
+        rgba(244, 251, 255, 0.97),
+        rgba(218, 241, 255, 0.95),
+        rgba(231, 247, 255, 0.97)
+    );
 
-    background: rgba(231, 247, 255, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    border-left: 1px solid rgba(80, 174, 225, 0.45);
 
-    border-left: 1px solid rgba(80, 174, 225, 0.40);
-
-    box-shadow: -10px 0 35px rgba(36, 123, 174, 0.15);
+    box-shadow: -12px 0 40px rgba(36, 123, 174, 0.18);
 
     z-index: 1000;
 
     animation: slideInRight 0.35s ease forwards;
 }
 
+
 /* BOTÓN PARA CERRAR */
 
 .close-popup {
     position: absolute;
 
-    top: 15px;
-    right: 20px;
+    top: 18px;
+    right: 22px;
 
-    width: 40px;
-    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    border: 1px solid rgba(80, 174, 225, 0.30);
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid rgba(80, 174, 225, 0.35);
     border-radius: 50%;
 
-    background: rgba(135, 206, 235, 0.25);
+    background: rgba(135, 206, 235, 0.28);
 
-    /* COLOR DE LA FUENTE DEL BOTÓN CERRAR */
     color: #16466b;
 
     font-size: 30px;
@@ -317,63 +451,80 @@
         transform 0.2s ease;
 }
 
+
 /* EFECTO DEL BOTÓN CERRAR */
 
 .close-popup:hover {
-    background: rgba(105, 199, 243, 0.55);
-
+    background: rgba(105, 199, 243, 0.58);
     transform: rotate(90deg);
 }
 
-/* COLOR DE LA FUENTE DEL TÍTULO DEL PANEL */
+
+/* TÍTULO PRINCIPAL DEL PANEL */
 
 .service-popup h2 {
-    color: #16466b;
+    margin: 0 0 24px;
 
-    margin: 0 0 20px;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 28px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 29px;
     font-weight: 800;
-
     line-height: 1.4;
+
+    background: linear-gradient(
+        120deg,
+        #101d2b,
+        #16466b 55%,
+        #1685bd
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #16466b;
 }
 
-/* COLOR DE LA FUENTE DE LOS PÁRRAFOS DEL PANEL */
+
+/* PÁRRAFOS DEL PANEL */
 
 .service-popup p {
+    margin-bottom: 25px;
+
     color: #435d70;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
 
     line-height: 1.9;
 
-    margin-bottom: 25px;
     overflow-wrap: anywhere;
 }
 
-/* TÍTULOS SECUNDARIOS DEL PANEL */
+
+/* TÍTULOS SECUNDARIOS */
 
 .service-popup h3 {
     color: #16466b;
 
-    font-size: 21px;
-    font-weight: 750;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 800;
     line-height: 1.4;
 }
 
-/* ETIQUETAS DE LOS FORMULARIOS DEL PANEL */
+
+/* ETIQUETAS DE LOS FORMULARIOS */
 
 .service-popup label {
     color: #16466b;
 
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 14px;
     font-weight: 700;
 }
 
-/* CAMPOS DE TEXTO DEL PANEL */
+
+/* CAMPOS DEL FORMULARIO */
 
 .service-popup input,
 .service-popup textarea,
@@ -381,69 +532,89 @@
     width: 100%;
     box-sizing: border-box;
 
-    padding: 12px 14px;
+    padding: 13px 15px;
 
     color: #263746;
 
-    background: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.82);
 
-    border: 1px solid rgba(80, 174, 225, 0.40);
-    border-radius: 10px;
+    border: 1px solid rgba(80, 174, 225, 0.42);
+    border-radius: 12px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 15px;
 
     outline: none;
 
     transition:
         border-color 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        background 0.2s ease;
 }
 
-/* COLOR DEL BORDE AL SELECCIONAR UN CAMPO */
+
+/* ENFOQUE DE LOS CAMPOS */
 
 .service-popup input:focus,
 .service-popup textarea:focus,
 .service-popup select:focus {
     border-color: #1685bd;
 
-    box-shadow: 0 0 0 3px rgba(22, 133, 189, 0.12);
+    background: #ffffff;
+
+    box-shadow: 0 0 0 4px rgba(22, 133, 189, 0.12);
 }
+
 
 /* BOTONES DENTRO DEL PANEL */
 
 .service-popup button:not(.close-popup) {
     color: #ffffff;
 
-    background: #168cc5;
+    background: linear-gradient(
+        135deg,
+        #168cc5,
+        #126b9d
+    );
 
     border: 1px solid rgba(80, 174, 225, 0.45);
-    border-radius: 10px;
+    border-radius: 11px;
 
-    padding: 11px 20px;
+    padding: 12px 22px;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
 
     cursor: pointer;
 
+    box-shadow: 0 5px 15px rgba(0, 90, 160, 0.16);
+
     transition:
         background 0.2s ease,
-        transform 0.2s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
+
+
+/* EFECTO DE LOS BOTONES DEL PANEL */
 
 .service-popup button:not(.close-popup):hover {
-    background: #16466b;
+    background: linear-gradient(
+        135deg,
+        #16466b,
+        #1685bd
+    );
 
     transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 90, 160, 0.24);
 }
+
 
 /* =========================================
    ANIMACIONES
    ========================================= */
-
-/* ENTRADA DEL PANEL DESDE LA DERECHA */
 
 @keyframes slideInRight {
     from {
@@ -455,7 +626,6 @@
     }
 }
 
-/* APARICIÓN DEL FONDO */
 
 @keyframes fadeIn {
     from {
@@ -467,25 +637,33 @@
     }
 }
 
+
 /* =========================================
-   TABLETS
+   TABLETAS
    ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .service-available {
-        width: 95%;
+        width: 96%;
+        padding: 35px 15px;
     }
 
     .service-list {
-        width: 47%;
-        margin: 1% 1% 20px;
+        width: 45%;
+        margin: 0 2% 28px;
+    }
+
+    .service-list .card {
+        min-height: 320px;
     }
 
     .description {
         width: 90%;
-        margin: 100px auto 60px;
+        margin: 65px auto 70px;
+        padding: 28px 30px;
     }
 }
+
 
 /* =========================================
    CELULARES
@@ -493,46 +671,59 @@
 
 @media (max-width: 600px) {
     .service-available {
-        width: 95%;
-        margin-top: 60px;
-        padding: 10px;
+        width: 100%;
+        margin-top: 30px;
+        padding: 25px 18px;
     }
 
-    .service-available h2 {
-        font-size: 27px;
+    .service-available > h2 {
+        margin-bottom: 30px;
+        font-size: 29px;
+        letter-spacing: -0.5px;
     }
 
     .service-list {
         display: block;
         width: 100%;
-        margin: 10px 0 20px;
+        margin: 0 0 24px;
     }
 
     .service-list .card {
-        min-height: 230px;
+        min-height: 0;
+        border-radius: 20px;
+    }
+
+    .service-list .card-header {
+        padding: 23px 18px;
     }
 
     .service-list .card-header h3 {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .service-list .card-body {
-        padding: 22px;
+        padding: 25px 22px 28px;
     }
 
     .service-list .card-body p {
-        font-size: 14px;
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .service-list .card-body .btn {
+        padding: 12px 23px;
     }
 
     .description {
-        width: 95%;
-        margin: 60px auto 40px;
-        padding: 20px;
+        width: 92%;
+        margin: 45px auto 50px;
+        padding: 24px 22px;
+        border-radius: 20px;
     }
 
     .description p {
-        font-size: 14px;
-        line-height: 1.8;
+        font-size: 15px;
+        line-height: 1.85;
         text-align: left;
     }
 
@@ -540,17 +731,23 @@
         width: 100%;
         max-width: 100%;
 
-        padding: 65px 22px 25px;
+        padding: 72px 22px 28px;
     }
 
     .service-popup h2 {
-        font-size: 24px;
+        font-size: 25px;
+    }
+
+    .service-popup h3 {
+        font-size: 20px;
     }
 
     .service-popup p {
         font-size: 15px;
+        line-height: 1.85;
     }
 }
+
 
 /* =========================================
    ACCESIBILIDAD
@@ -562,7 +759,8 @@
     .description,
     .close-popup,
     .service-popup,
-    .service-overlay {
+    .service-overlay,
+    .service-popup button:not(.close-popup) {
         animation: none;
         transition: none;
     }

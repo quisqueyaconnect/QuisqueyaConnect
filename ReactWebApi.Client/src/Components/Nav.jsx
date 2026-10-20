@@ -1,4 +1,5 @@
 import "../Styles/Nav.css"
+import { Link } from "react-router-dom";
 
 const Nav = () => {
     return(
@@ -15,13 +16,16 @@ const Nav = () => {
                         <div className="form-group">
                             <ul className="list">
                                 <li className="list-item">
-                                    <a href="#">Home</a>
+                                    <Link to="/">Inicio</Link>
                                 </li>
                                 <li className="list-item">
-                                    <a href="https://www.google.com/">Quieres le contactemos? </a>
+                                    <Link to="/services">Servicios</Link>
                                 </li>
                                 <li className="list-item">
-                                    <a href="#">Contact</a>
+                                    <a href="#">Contacto</a>
+                                </li>
+                                <li className="list-item">
+                                    <Link to="/contacto">Sobre Nosotros</Link>
                                 </li>
                             </ul>
                         </div>

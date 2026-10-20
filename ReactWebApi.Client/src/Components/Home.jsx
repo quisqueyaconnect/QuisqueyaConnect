@@ -1,5 +1,6 @@
 import "../Styles/Home.css";
 import AgentesConectando from '../assets/AgentesConectando.png'
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -21,8 +22,8 @@ function Home() {
                     </h1>
 
                     <p className="home-description">
-                        En Quisqueya Connect ayudamos a las empresas a
-                        fortalecer sus relaciones con los clientes mediante
+                        En Quisqueya Connect nos especializamos en ayudar a las empresas a
+                        fortalecer su relación con los clientes mediante
                         una atención cercana, profesional y eficiente.
                     </p>
 
@@ -33,9 +34,9 @@ function Home() {
                     </p>
 
                     <div className="home-buttons">
-                        <a href="#servicios" className="home-btn-primary">
+                        <Link to="/services" className="home-btn-primary">
                             Nuestros servicios
-                        </a>
+                        </Link>
 
                         <a href="#contacto" className="home-btn-secondary">
                             Contáctanos
@@ -62,27 +63,43 @@ function Home() {
 
             {/* SEGUNDA SECCIÓN: PROPUESTA DE VALOR */}
             <section className="home-value" id="nosotros">
-
+                {/* CONTENIDO DEL LADO IZQUIERDO */}
                 <article className="home-value-content">
                     <p className="home-subtitle">
                         ¿POR QUÉ QUISQUEYA CONNECT?
                     </p>
-
+                    
                     <h2>
                         Cada conversación es una oportunidad.
                     </h2>
-
                     <p>
-                        Creemos que una buena experiencia de servicio puede
+                        Para nosotros, una buena experiencia de servicio puede
                         transformar la relación entre una empresa y sus
                         clientes. Trabajamos para ofrecer comunicaciones
                         claras, atención personalizada y soluciones
                         adaptadas a cada negocio.
                     </p>
+
                 </article>
+                {/* CONTENIDO DEL LADO DERECHO */}
+                <article className="home-value-action">
+                    
+                    <h2>
+                        Tu empresa merece una atención al cliente excepcional.
+                    </h2>
 
+                    <p>
+                        En Quisqueya Connect ayudamos a las empresas a gestionar
+                        sus comunicaciones con sus clientes mediante servicios
+                        de atención telefónica, gestión de solicitudes y
+                        recepción de llamadas adaptados a sus necesidades.
+                    </p>
+                    <p><strong>Beneficios de trabajar con nosotros</strong></p>
+                    <p><strong>Atención cercana:</strong> comunicación profesional y amable con los clientes.</p>
+                    <p><strong>Flexibilidad operativa:</strong> soluciones adaptadas al volumen de llamadas y a los horarios acordados.</p>
+                    <p><strong>Apoyo a tu equipo:</strong> ayudamos a gestionar las consultas para que tu empresa pueda concentrarse en sus prioridades.</p>
+                </article>
             </section>
-
         </main>
     );
 }

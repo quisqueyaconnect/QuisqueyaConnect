@@ -306,13 +306,16 @@
     position: relative;
 
     width: 100%;
-    min-height: 350px;
-    padding: 85px 7%;
+    min-height: 650px;
+    padding: 100px;
     box-sizing: border-box;
+    padding: 100px;
+    gap: 100px;
 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: right;
+    justify-content: left;
 
     background: linear-gradient(
         135deg,
@@ -324,9 +327,16 @@
     border-top: 1px solid rgba(255, 255, 255, 0.85);
 }
 
+/* =========================================
+   ARTÍCULO IZQUIERDO
+   ¿POR QUÉ QUISQUEYA CONNECT?
+========================================= */
+
 .home-value-content {
     width: 100%;
-    max-width: 850px;
+    max-width: 580px;
+    min-width: 0;
+    justify-self: start;
 
     display: flex;
     flex-direction: column;
@@ -337,23 +347,107 @@
     text-align: center;
 }
 
+.home-value-content .home-subtitle {
+    margin: 0;
+
+    color: #1685B5;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
 .home-value-content h2 {
-    max-width: 750px;
+    width: 100%;
+    max-width: 550px;
     margin: 0;
 
     color: #0B2F4F;
-    font-size: clamp(28px, 3.5vw, 43px);
+    font-size: clamp(28px, 3vw, 40px);
     font-weight: 800;
     line-height: 1.25;
+    letter-spacing: -0.6px;
 }
 
 .home-value-content > p:last-child {
-    max-width: 780px;
+    max-width: 560px;
     margin: 0;
 
     color: #425B6D;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.9;
+}
+
+/* =========================================
+   ARTÍCULO DERECHO
+   PRESENTACIÓN Y LLAMADA A LA ACCIÓN
+========================================= */
+
+.home-value-action {
+    width: 100%;
+    max-width: 580px;
+    min-width: 0;
+    justify-self: end;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 22px;
+
+    padding: 32px;
+
+    background: rgba(255, 255, 255, 0.40);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 40px rgba(11, 71, 112, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.home-value-action h2 {
+    width: 100%;
+    margin: 0;
+
+    color: #0B2F4F;
+    font-size: clamp(25px, 2.5vw, 34px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+.home-value-action > p {
+    width: 100%;
+    margin: 0;
+
+    color: #425B6D;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+/* Botones del artículo derecho */
+
+.home-value-buttons {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-top: 4px;
+}
+
+.home-value-buttons .home-btn-primary,
+.home-value-buttons .home-btn-secondary {
+    min-height: 50px;
+    padding: 0 20px;
+    font-size: 14px;
 }
 
 /* =========================================
@@ -361,7 +455,9 @@
 ========================================= */
 
 @media (max-width: 900px) {
+
     .home-hero {
+        grid-template-columns: 1fr 1fr;
         min-height: auto;
         padding: 65px 5%;
         gap: 30px;
@@ -391,19 +487,66 @@
         padding: 12px 15px;
         font-size: 12px;
     }
+
+    /* Propuesta de valor */
+
+    .home-value {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        padding: 65px 5%;
+    }
+
+    .home-value-action,
+    .home-value-content {
+        flex: 1 1 0;
+        width: 0;
+        min-width: 0;
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .home-value-action {
+        padding: 24px;
+    }
+
+    .home-value-content h2 {
+        font-size: clamp(25px, 3vw, 34px);
+    }
+
+    .home-value-action h2 {
+        font-size: clamp(23px, 2.8vw, 30px);
+    }
+
+    .home-value-content > p:last-child,
+    .home-value-action > p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .home-value-buttons {
+        gap: 10px;
+    }
+
+    .home-value-buttons .home-btn-primary,
+    .home-value-buttons .home-btn-secondary {
+        padding: 0 15px;
+        font-size: 13px;
+    }
 }
 
+
 /* =========================================
-   MÓVILES
+   MÓVILES Y TABLETAS PEQUEÑAS
 ========================================= */
 
 @media (max-width: 650px) {
+
     .home-hero {
         grid-template-columns: 1fr;
-
         min-height: auto;
         padding: 45px 6% 55px;
-
         gap: 40px;
     }
 
@@ -447,7 +590,6 @@
         width: 100%;
         max-width: 100%;
         height: 300px;
-
         border-radius: 20px;
     }
 
@@ -457,30 +599,75 @@
         font-size: 11px;
     }
 
+    /* Propuesta de valor: artículos en columna */
+
     .home-value {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: 30px;
         min-height: auto;
-        padding: 60px 7%;
+        padding: 50px 6%;
+    }
+
+    .home-value-action,
+    .home-value-content {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        flex: none;
+        box-sizing: border-box;
+    }
+
+    /* Primero la presentación y después el contenido */
+
+    .home-value-action {
+        order: 1;
+        padding: 25px;
+        gap: 18px;
     }
 
     .home-value-content {
+        order: 2;
         gap: 18px;
     }
 
     .home-value-content h2 {
-        font-size: 29px;
+        max-width: 100%;
+        font-size: clamp(27px, 7vw, 34px);
     }
 
-    .home-value-content > p:last-child {
+    .home-value-action h2 {
+        font-size: clamp(24px, 6.5vw, 31px);
+    }
+
+    .home-value-content > p:last-child,
+    .home-value-action > p {
+        max-width: 100%;
         font-size: 15px;
         line-height: 1.8;
     }
+
+    .home-value-buttons {
+        width: 100%;
+        gap: 10px;
+    }
+
+    .home-value-buttons .home-btn-primary,
+    .home-value-buttons .home-btn-secondary {
+        min-height: 48px;
+        padding: 0 16px;
+        font-size: 13px;
+    }
 }
+
 
 /* =========================================
    MÓVILES PEQUEÑOS
 ========================================= */
 
 @media (max-width: 380px) {
+
     .home-buttons {
         flex-direction: column;
         align-items: stretch;
@@ -493,5 +680,33 @@
 
     .home-image {
         height: 240px;
+    }
+
+    .home-value {
+        padding: 40px 5%;
+        gap: 25px;
+    }
+
+    .home-value-action {
+        padding: 20px;
+    }
+
+    .home-value-content h2 {
+        font-size: 26px;
+    }
+
+    .home-value-action h2 {
+        font-size: 23px;
+    }
+
+    .home-value-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .home-value-buttons .home-btn-primary,
+    .home-value-buttons .home-btn-secondary {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
