@@ -79,7 +79,45 @@ function Home() {
                         claras, atención personalizada y soluciones
                         adaptadas a cada negocio.
                     </p>
+                        <div class="benefits-container">
 
+        <div class="benefit-card">
+            <div class="benefit-icon">💬</div>
+            <h3>Comunicación profesional</h3>
+            <p>
+                Atención amable, clara y alineada con
+                las instrucciones del cliente.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">⚙️</div>
+            <h3>Procesos adaptables</h3>
+            <p>
+                Protocolos y guiones definidos según
+                las necesidades de cada empresa.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">📊</div>
+            <h3>Seguimiento del servicio</h3>
+            <p>
+                Posibilidad de establecer indicadores
+                e informes según lo acordado.
+            </p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h3>Relaciones duraderas</h3>
+            <p>
+                Enfoque en la comunicación, la colaboración
+                y la mejora del servicio.
+            </p>
+        </div>
+
+    </div>
                 </article>
                 {/* CONTENIDO DEL LADO DERECHO */}
                 <article className="home-value-action">
@@ -100,6 +138,9 @@ function Home() {
                     <p><strong>Apoyo a tu equipo:</strong> ayudamos a gestionar las consultas para que tu empresa pueda concentrarse en sus prioridades.</p>
                 </article>
             </section>
+{/* <section class="benefits-section">
+
+</section> */}
         </main>
     );
 }

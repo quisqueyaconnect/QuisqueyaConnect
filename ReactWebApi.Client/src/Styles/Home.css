@@ -710,3 +710,76 @@
         box-sizing: border-box;
     }
 }
+/* CONTENEDOR DE LAS TARJETAS */
+.benefits-container {
+    width: 100%;
+    margin-top: 1px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+/* TARJETAS */
+.benefit-card {
+    padding: 25px 20px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(135, 206, 250, 0.45);
+    border-radius: 18px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 8px 25px rgba(20, 90, 140, 0.10);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(20, 90, 140, 0.18);
+    border-color: rgba(70, 150, 210, 0.65);
+}
+
+/* ICONOS */
+.benefit-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+/* TÍTULOS */
+.benefit-card h3 {
+    font-size: 18px;
+    color: #0B2F4F;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+/* DESCRIPCIONES */
+.benefit-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #36566F;
+    margin: 0;
+}
+
+/* ADAPTACIÓN PARA MÓVILES */
+@media (max-width: 600px) {
+    .benefits-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 25px;
+    }
+
+    .benefit-card {
+        padding: 22px 18px;
+    }
+}

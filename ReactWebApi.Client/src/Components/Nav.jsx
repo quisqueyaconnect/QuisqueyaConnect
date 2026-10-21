@@ -22,7 +22,10 @@ const Nav = () => {
                                     <Link to="/services">Servicios</Link>
                                 </li>
                                 <li className="list-item">
-                                    <a href="#">Contacto</a>
+                                    <Link to="/contactUs">Contactanos</Link>
+                                </li>
+                                <li className="list-item">
+                                    <Link to="/howWeWork">Como Trabajamos?</Link>
                                 </li>
                                 <li className="list-item">
                                     <Link to="/contacto">Sobre Nosotros</Link>

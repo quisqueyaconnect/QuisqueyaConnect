@@ -1,0 +1,892 @@
+
+/* =========================================
+   QUISQUEYA CONNECT
+   TECNOLOGÍA, CALIDAD Y FORMA DE TRABAJO
+   ESTILO AZUL CRISTALINO PROFESIONAL
+========================================= */
+
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.how-work {
+    width: 100%;
+    min-height: 100vh;
+    padding: 75px 5% 95px;
+
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0B2F4F;
+
+    /* NO MODIFICAMOS EL FONDO GENERAL */
+    background: transparent;
+}
+
+.how-work * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ENCABEZADO PRINCIPAL
+========================================= */
+
+.how-work-header {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+
+/* SUBTÍTULO */
+
+.how-work-subtitle {
+    margin: 0 0 20px;
+
+    color: #086c9c;
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.how-work-header h1 {
+    margin: 0 0 25px;
+
+    color: #082b4b;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.how-work-header h1 span {
+    color: #087cad;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN CON FONDO CRISTALINO
+========================================= */
+
+.how-work-description {
+    max-width: 900px;
+    margin: 0 auto;
+
+    padding: 25px 35px;
+
+    color: #193c58;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.85;
+
+    /* FONDITO PARA RESALTAR LAS LETRAS */
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.97),
+        rgba(226, 244, 255, 0.95)
+    );
+
+    border: 1px solid rgba(130, 190, 230, 0.65);
+    border-radius: 20px;
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 8px 25px rgba(20, 90, 140, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+
+/* =========================================
+   PROCESO DE ATENCIÓN
+========================================= */
+
+.how-work-process {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto 95px;
+}
+
+.how-work-steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 32px;
+}
+
+.how-work-step-group {
+    position: relative;
+    display: flex;
+    min-width: 0;
+}
+
+
+/* =========================================
+   TARJETAS PRINCIPALES
+========================================= */
+
+.how-work-card {
+    position: relative;
+
+    width: 100%;
+    min-height: 390px;
+
+    padding: 45px 22px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    /* FONDO AZUL CRISTALINO */
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.96),
+        rgba(222, 242, 255, 0.95),
+        rgba(207, 234, 252, 0.94)
+    );
+
+    border: 1px solid rgba(125, 185, 225, 0.7);
+    border-radius: 25px;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 12px 30px rgba(20, 90, 140, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.how-work-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(20, 90, 140, 0.23);
+}
+
+
+/* =========================================
+   NÚMERO DE CADA TARJETA
+========================================= */
+
+.how-work-number {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #39b6f5,
+        #0868bd
+    );
+
+    box-shadow:
+        0 5px 15px rgba(0, 105, 190, 0.3);
+}
+
+
+/* =========================================
+   ICONOS
+========================================= */
+
+.how-work-icon {
+    margin: 30px 0 25px;
+
+    font-size: 56px;
+    line-height: 1.2;
+
+    filter: drop-shadow(
+        0 5px 8px rgba(0, 90, 160, 0.15)
+    );
+}
+
+
+/* =========================================
+   TÍTULOS DE TARJETAS
+========================================= */
+
+.how-work-card h3 {
+    margin: 0 0 18px;
+
+    color: #082e52;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   FONDITO DE LAS DESCRIPCIONES
+========================================= */
+
+.how-work-card p {
+    width: 100%;
+    margin: 0;
+    padding: 17px 15px;
+
+    color: #173a56;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.8;
+
+    /* FONDO PROPIO DEL TEXTO */
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(165, 210, 238, 0.75);
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 12px rgba(20, 90, 140, 0.07);
+
+    opacity: 1;
+    text-shadow: none;
+}
+
+
+/* =========================================
+   FLECHAS ENTRE TARJETAS
+========================================= */
+
+.how-work-arrow {
+    position: absolute;
+
+    right: -29px;
+    top: 45%;
+
+    z-index: 2;
+
+    color: #0879c5;
+    font-size: 33px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+/* =========================================
+   TECNOLOGÍA Y OPERACIONES
+========================================= */
+
+.how-work-technology {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto 95px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    align-items: center;
+    gap: 50px;
+}
+
+
+/* =========================================
+   PANEL CRISTALINO IZQUIERDO
+========================================= */
+
+.how-work-technology-content {
+    width: 100%;
+    min-width: 0;
+
+    padding: 35px;
+
+    /* FONDO PARA RESALTAR TODO EL CONTENIDO */
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.96),
+        rgba(226, 244, 255, 0.94)
+    );
+
+    border: 1px solid rgba(135, 195, 230, 0.65);
+    border-radius: 28px;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 12px 35px rgba(20, 90, 140, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+
+/* TÍTULO DE TECNOLOGÍA */
+
+.how-work-technology-content h2 {
+    margin: 0 0 25px;
+
+    color: #082e52;
+    font-size: clamp(30px, 3vw, 39px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.how-work-technology-content h2 span {
+    color: #087cad;
+}
+
+
+/* =========================================
+   DESCRIPCIONES DE TECNOLOGÍA
+========================================= */
+
+.how-work-technology-description {
+    margin: 0 0 16px;
+
+    padding: 17px 20px;
+
+    color: #193c58;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+
+    /* FONDITO BLANCO CRISTALINO */
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 1px solid rgba(170, 215, 240, 0.75);
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 12px rgba(20, 90, 140, 0.06);
+}
+
+
+/* =========================================
+   CARACTERÍSTICAS DE TECNOLOGÍA
+========================================= */
+
+.how-work-features {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+    margin-top: 30px;
+}
+
+
+/* TARJETA DE CARACTERÍSTICA */
+
+.how-work-feature {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+    min-width: 0;
+
+    padding: 17px 14px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.98),
+        rgba(230, 246, 255, 0.96)
+    );
+
+    border: 1px solid rgba(145, 197, 230, 0.65);
+    border-radius: 18px;
+
+    box-shadow:
+        0 6px 18px rgba(20, 90, 140, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.how-work-feature:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 25px rgba(20, 90, 140, 0.17);
+}
+
+
+/* ICONOS CIRCULARES */
+
+.how-work-feature-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 26px;
+
+    background: linear-gradient(
+        135deg,
+        #d5efff,
+        #ffffff
+    );
+
+    border: 1px solid rgba(140, 195, 230, 0.65);
+
+    box-shadow:
+        0 4px 12px rgba(20, 90, 140, 0.10);
+}
+
+
+/* TEXTO DE CARACTERÍSTICAS */
+
+.how-work-feature-text {
+    min-width: 0;
+}
+
+.how-work-feature-text h3 {
+    margin: 0 0 9px;
+
+    color: #082e52;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.how-work-feature-text p {
+    margin: 0;
+
+    color: #29465d;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.7;
+    opacity: 1;
+}
+
+
+/* =========================================
+   IMAGEN DERECHA
+========================================= */
+
+.how-work-image-container {
+    position: relative;
+
+    width: 100%;
+    height: 490px;
+
+    overflow: hidden;
+    border-radius: 28px;
+
+    border: 3px solid rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 18px 42px rgba(20, 90, 140, 0.20),
+        0 5px 12px rgba(20, 90, 140, 0.08);
+}
+
+.how-work-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+.how-work-image-container:hover .how-work-image {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   INSIGNIA SOBRE LA IMAGEN
+========================================= */
+
+.how-work-image-badge {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    max-width: calc(100% - 40px);
+    padding: 18px 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    border-radius: 20px;
+
+    background: rgba(240, 249, 255, 0.97);
+
+    border: 1px solid rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 8px 25px rgba(20, 90, 140, 0.22);
+}
+
+
+/* ICONO DE VERIFICACIÓN */
+
+.how-work-shield {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 14px;
+
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+
+    background: linear-gradient(
+        135deg,
+        #3ab8f5,
+        #0872c5
+    );
+}
+
+
+/* TEXTO DE INSIGNIA */
+
+.how-work-image-badge p {
+    margin: 0;
+
+    color: #092d50;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.how-work-image-badge p span {
+    display: block;
+
+    color: #29465d;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   SECCIÓN FINAL DE CONTACTO
+========================================= */
+
+.how-work-contact {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+    padding: 60px 45px;
+
+    text-align: center;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.98),
+        rgba(219, 241, 255, 0.97),
+        rgba(236, 249, 255, 0.98)
+    );
+
+    border: 1px solid rgba(135, 190, 225, 0.7);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 12px 35px rgba(20, 90, 140, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+
+/* TÍTULO FINAL */
+
+.how-work-contact h2 {
+    margin: 0 0 22px;
+
+    color: #092d50;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.how-work-contact h2 span {
+    color: #087cad;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN FINAL CON FONDO
+========================================= */
+
+.how-work-contact p {
+    max-width: 750px;
+    margin: 0 auto 32px;
+
+    padding: 20px 25px;
+
+    color: #193c58;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.8;
+
+    background: rgba(255, 255, 255, 0.93);
+
+    border: 1px solid rgba(170, 215, 240, 0.75);
+    border-radius: 17px;
+
+    box-shadow:
+        0 5px 15px rgba(20, 90, 140, 0.08);
+}
+
+
+/* =========================================
+   BOTÓN DE CONTACTO
+========================================= */
+
+.how-work-contact-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+    padding: 16px 32px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #1685B5,
+        #0868bd
+    );
+
+    box-shadow:
+        0 8px 22px rgba(0, 100, 190, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.how-work-contact-button:hover {
+    transform: translateY(-4px);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 13px 30px rgba(0, 100, 190, 0.32);
+}
+
+.how-work-contact-button:focus-visible {
+    outline: 3px solid #075c9a;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLETS
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .how-work-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .how-work-card {
+        min-height: 350px;
+    }
+
+    .how-work-arrow {
+        display: none;
+    }
+
+    .how-work-technology {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .how-work-image-container {
+        height: 450px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULARES
+========================================= */
+
+@media (max-width: 650px) {
+
+    .how-work {
+        padding: 45px 5% 70px;
+    }
+
+    .how-work-header {
+        margin-bottom: 40px;
+    }
+
+    .how-work-subtitle {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .how-work-header h1 {
+        font-size: 30px;
+    }
+
+    .how-work-description {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .how-work-process {
+        margin-bottom: 70px;
+    }
+
+    .how-work-steps {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .how-work-card {
+        min-height: auto;
+        padding: 45px 22px 30px;
+    }
+
+    .how-work-card p {
+        font-size: 15px;
+    }
+
+    .how-work-technology {
+        margin-bottom: 70px;
+        gap: 35px;
+    }
+
+    .how-work-technology-content {
+        padding: 25px 18px;
+    }
+
+    .how-work-technology-content h2 {
+        font-size: 29px;
+    }
+
+    .how-work-technology-description {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .how-work-features {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .how-work-feature {
+        padding: 17px 14px;
+    }
+
+    .how-work-image-container {
+        height: 330px;
+    }
+
+    .how-work-image-badge {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px;
+    }
+
+    .how-work-image-badge p {
+        font-size: 12px;
+    }
+
+    .how-work-contact {
+        padding: 42px 20px;
+    }
+
+    .how-work-contact p {
+        padding: 17px;
+        font-size: 15px;
+    }
+
+    .how-work-contact-button {
+        width: 100%;
+        padding: 16px 20px;
+    }
+
+}
+
+
+/* =========================================
+   PANTALLAS MUY PEQUEÑAS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .how-work-feature {
+        flex-direction: column;
+    }
+
+    .how-work-feature-icon {
+        width: 52px;
+        height: 52px;
+        min-width: 52px;
+    }
+
+    .how-work-image-container {
+        height: 280px;
+    }
+
+    .how-work-image-badge {
+        gap: 8px;
+    }
+
+    .how-work-shield {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+    }
+
+}
+
